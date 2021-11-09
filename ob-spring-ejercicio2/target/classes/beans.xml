@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    <bean id="notificationService" class="com.example.NotificationService">Podríamos poner scope="prototype" para que cada vez se creara un objeto calculadora, por defecto utiliza singleton, por lo que solo se crea una vez, aunque la usemos más. -->
+<!--    </bean>
+
+    <bean id="userService" class="com.example.UserService">
+        <constructor-arg name="notificationService" ref="notificationService"/>
+    </bean>
+-->
+
+    <!-- Basado en anotaciones, tenemos que añadir lo siguiente y cambiar el xmls de arriba -->
+    <context:component-scan base-package="com.example" />
+</beans>
